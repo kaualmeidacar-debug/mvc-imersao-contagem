@@ -95,7 +95,7 @@
             </li>
         
             <li>
-                <a class="dropdown-item" href="admin.html">
+                <a class="dropdown-item" href="admin.php">
                     <i class="bi bi-calendar-plus me-2"></i>
                     Cadastrar Eventos
                 </a>
