@@ -207,283 +207,111 @@
         <!-- FORMULÁRIO -->
 
         <div class="card-form mt-4">
-
-
             <h4 class="mb-4">
                 Informações do evento
             </h4>
-
 
             <div class="alert alert-success d-none" id="alerta" role="alert">
                 Seu cadastro foi concluído com sucesso.
             </div>
 
-
             <form id="formEvento">
-
-
                 <div class="row g-3">
 
-
                     <!-- titulo -->
-
                     <div class="col-md-6">
                         <label class="form-label">
                             Título do evento
                         </label>
-
-                        <input id="titulo" type="text" class="form-control">
-
-                        <div class="invalid-feedback">
-                            Digite o título do evento.
-                        </div>
+                        <input id="titulo" name="titulo" type="text" class="form-control">
                     </div>
 
-
-
                     <!-- categoria -->
-
                     <div class="col-md-3">
-
                         <label class="form-label">
                             Categoria
                         </label>
-
-                        <select id="categoria" class="form-select">
-
-                            <option value="">
-                                Escolha
-                            </option>
-
-                            <option>
-                                Música
-                            </option>
-
-                            <option>
-                                Cultura
-                            </option>
-
+                        <select id="categoria" name="categoria" class="form-select">
+                            <option value="">Escolha</option>
+                            <option>Música</option>
+                            <option>Cultura</option>
                         </select>
-
-                        <div class="invalid-feedback">
-                            Selecione uma categoria.
-                        </div>
-
                     </div>
 
-
+                    <!-- Descrição -->
                     <div class="col-md-6">
-
-
                         <label class="form-label">
                             Descrição completa
                         </label>
-
-
-                        <textarea id="descricao" class="form-control">
-                        </textarea>
-
-                        <div class="invalid-feedback">
-                            Digite uma descrição.
-                        </div>
-
-
+                        <textarea id="descricao" name="descricao" class="form-control"></textarea>
                     </div>
 
-
-
-
                     <!-- imagem -->
-
-
                     <div class="col-md-6">
-
-
                         <label class="form-label">
                             Imagem de capa
                         </label>
-
-
-                        <input id="imagem" type="file" class="form-control">
-                        <div class="invalid-feedback">
-                            Selecione uma imagem de capa.
-                        </div>
-
-
+                        <input id="imagem" name="imagem" type="file" class="form-control">
                     </div>
 
-
                     <!-- data -->
-
-
                     <div class="col-md-3">
-
-
                         <label class="form-label">
                             Data
                         </label>
-
-
-                        <input id="data" type="date" class="form-control">
-
-                        <div class="invalid-feedback">
-                            Informe a data do evento.
-                        </div>
-
+                        <input id="data" name="data" type="date" class="form-control">
                     </div>
 
-
-
-
                     <!-- hora -->
-
-
                     <div class="col-md-3">
-
-
                         <label class="form-label">
                             Horário
                         </label>
-
-                        <input id="horario" type="time" class="form-control">
-
-                        <div class="invalid-feedback">
-                            Informe o horário.
-                        </div>
-
+                        <input id="horario" name="horario" type="time" class="form-control">
                     </div>
 
-
-
-
-
-
+                    <!-- local -->
                     <div class="col-md-6">
-
-
                         <label class="form-label">
                             Local do evento
                         </label>
-
-
-                        <input id="local" class="form-control">
-
-                        <div class="invalid-feedback">
-                            Informe o local do evento.
-                        </div>
-
-
+                        <input id="local" name="local" class="form-control">
                     </div>
 
-
-
-
-
+                    <!-- Endereço -->
                     <div class="col-md-6">
-
-
                         <label class="form-label">
                             Endereço
                         </label>
-
-                        <input id="endereco" class="form-control">
-
-                        <div class="invalid-feedback">
-                            Informe o endereço.
-                        </div>
-
+                        <input id="endereco" name="endereco" class="form-control">
                     </div>
 
-
-
-
-
+                    <!-- Telefone -->
                     <div class="col-md-4">
-
                         <label class="form-label">
                             Telefone
                         </label>
-                        <input id="telefone" class="form-control">
-
-                        <div class="invalid-feedback">
-                            Informe o telefone.
-                        </div>
-
+                        <input id="telefone" name="telefone" class="form-control">
                     </div>
 
-
-
-
+                    <!-- Email -->
                     <div class="col-md-4">
-
                         <label class="form-label">
                             Email
                         </label>
-
-                        <input id="email" class="form-control">
-
-                        <div class="invalid-feedback">
-                            Digite um email válido.
-                        </div>
-
+                        <input id="email" name="email" type="email" class="form-control">
                     </div>
-
-
-
-                    <div class="col-md-4">
-
-                        <label class="form-label">
-                            Site
-                        </label>
-
-                        <input id="site" class="form-control">
-                        <div class="invalid-feedback">
-                            Digite um site válido.
-                        </div>
-
-                    </div>
-
-
-
                 </div>
-
-
 
                 <div class="mt-4 text-end">
-
-
-                    <button type="button" class="btn btn-outline-secondary">
-
-                        Cancelar
-
-                    </button>
-
-
-
-                    <button class="btn btn-purple">
-
-                        Publicar evento
-
-                    </button>
-
-
-
+                    <button type="button" class="btn btn-outline-secondary">Cancelar</button>
+                    <button class="btn btn-purple">Publicar evento</button>
                 </div>
-
-
-
             </form>
-
-
         </div>
-
-
-
     </main>
 
-
     </div>
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- jQuery Validation -->
@@ -492,7 +320,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="./admin.js"></script>
+    <script src="../assets/js/admin.js"></script>
 
     <script>
         const btnMenu = document.getElementById("btnMenu");
