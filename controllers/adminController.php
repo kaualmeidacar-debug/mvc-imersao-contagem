@@ -90,10 +90,10 @@ function validarCadastro($validator)
 
 
     // Registro do Funcionário
-    $validator->required(
-        "imagem",
-        "O registro do admin é obrigatório."
-    );
+    // $validator->required(
+    //     "imagem",
+    //     "O registro do admin é obrigatório."
+    // );
 
     
 
