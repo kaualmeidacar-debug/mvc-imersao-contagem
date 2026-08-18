@@ -224,6 +224,8 @@
                             Título do evento
                         </label>
                         <input id="titulo" name="titulo" type="text" class="form-control">
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- categoria -->
@@ -236,6 +238,8 @@
                             <option>Música</option>
                             <option>Cultura</option>
                         </select>
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- Descrição -->
@@ -244,6 +248,8 @@
                             Descrição completa
                         </label>
                         <textarea id="descricao" name="descricao" class="form-control"></textarea>
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- imagem -->
@@ -252,6 +258,8 @@
                             Imagem de capa
                         </label>
                         <input id="imagem" name="imagem" type="file" class="form-control">
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- data -->
@@ -260,6 +268,8 @@
                             Data
                         </label>
                         <input id="data" name="data" type="date" class="form-control">
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- hora -->
@@ -268,6 +278,8 @@
                             Horário
                         </label>
                         <input id="horario" name="horario" type="time" class="form-control">
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- local -->
@@ -276,6 +288,8 @@
                             Local do evento
                         </label>
                         <input id="local" name="local" class="form-control">
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- Endereço -->
@@ -284,6 +298,8 @@
                             Endereço
                         </label>
                         <input id="endereco" name="endereco" class="form-control">
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- Telefone -->
@@ -292,6 +308,8 @@
                             Telefone
                         </label>
                         <input id="telefone" name="telefone" class="form-control">
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
 
                     <!-- Email -->
@@ -300,6 +318,8 @@
                             Email
                         </label>
                         <input id="email" name="email" type="email" class="form-control">
+                        <div class="invalid-feedback"></div>
+                        <div class="valid-feedback"></div>
                     </div>
                 </div>
 
@@ -308,6 +328,7 @@
                     <button class="btn btn-purple">Publicar evento</button>
                 </div>
             </form>
+            <div id="mensagem" class="alert d-none mt-3"></div>
         </div>
     </main>
 
@@ -321,7 +342,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="../assets/js/admin.js"></script>
-
+    
     <script>
         const btnMenu = document.getElementById("btnMenu");
 

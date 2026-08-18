@@ -1,62 +1,108 @@
 <?php
 
-//A resposta será enviada em formato JSON
+// A resposta será enviada em formato JSON
 header("Content-Type: application/json; charset=utf-8");
 
-//Verifica se a requisição é do tipo POST
+
+// Carrega a classe Validator
+require __DIR__ . "/../libs/php/Validator.php";
+
+
+
+// Verifica se a requisição é do tipo POST
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    http_response_code(405); //405 - método não permitido
+
+    http_response_code(405);
 
     echo json_encode([
         "sucesso" => false,
-        "mensagem" => "Método não permitido, esperava POST"
-    ]);
+        "mensagem" => "Método não permitido. Utilize uma requisição POST.",
+        "dados" => null,
+        "erros" => null
+    ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
     exit;
 }
 
-// Recebe os dados enviados pelo formulário
-$titulo = trim($_POST['titulo']);
-$categoria = trim($_POST['categoria']);
-$descricao = trim($_POST['descricao']);
-$imagem = trim($_POST['imagem']);
-$data = trim($_POST['data']);
-$horario = trim($_POST['horario']);
-$local = trim($_POST['local']);
-$endereco = trim($_POST['endereco']);
-$telefone = trim($_POST['telefone']);
-$email = trim($_POST['email']);
 
-// Valida os campos obrigatórios 
-if ($titulo === "" || $categoria === "" || $descricao === "" || $imagem === "" || $data === "" || $horario === "" || $local === "" || $endereco === "" || $telefone === "" || $email === "") {
-    http_response_code(400);
+// Cria o objeto validador
+$validator = new Validator($_POST);
+
+
+// Executa as regras de validação
+validarCadastro($validator);
+
+
+// Verifica se existem erros de validação
+if ($validator->fails()) {
+
+    http_response_code(422);
 
     echo json_encode([
         "sucesso" => false,
-        "mensagem" => "Preencha todos os campos"
-    ]);
+        "mensagem" => "Corrija os campos indicados.",
+        "dados" => null,
+        "erros" => $validator->errors()
+    ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
     exit;
 }
 
-// -------->>> TODO: Aqui seria o banco de dados 
 
-//Simulando  retornar  sucesso 
+// -------->>> TODO: Aqui será realizado o cadastro no banco de dados
+
+
+// Retorna sucesso
 http_response_code(200);
 
 echo json_encode([
     "sucesso" => true,
-    "mensagem" => "Cliente cadastrado com sucesso!",
-    "cliente" => [
-        "titulo" => $titulo,
-        "categoria" => $categoria,
-        "descricao" => $descricao,
-        "imagem" => $imagem,
-        "data" => $data,
-        "horario" => $horario,
-        "local" => $local,
-        "endereco" => $endereco,
-        "telefone" => $telefone,
-        "email" => $email,
-    ]
-]);
+    "mensagem" => "Admin cadastrado com sucesso (controllerFuncionario).",
+    "dados" => $validator->data(),
+    "erros" => null
+], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+
+exit;
+
+
+// --------------------------------------------------
+// Funções auxiliares
+// --------------------------------------------------
+
+function validarCadastro($validator)
+{
+    // Nome
+    $validator->required(
+        "titulo",
+        "O nome do admin é obrigatório."
+    );
+
+   
+
+
+    // CNPJ
+    $validator->required(
+        "categoria",
+        "O CNPJ do admin é obrigatório."
+    );
+
+   
+
+
+    // Registro do Funcionário
+    $validator->required(
+        "imagem",
+        "O registro do admin é obrigatório."
+    );
+
+    
+
+
+    // PIS
+    $validator->required(
+        "data",
+        "O PIS do admin é obrigatório."
+    );
+
+   
+}
