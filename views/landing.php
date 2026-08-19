@@ -52,7 +52,7 @@
                     <!-- BOTÕES -->
                     <div class="d-flex gap-2">
  
-                        <a href="./views/login.php" id="entrar" class="btn-login">Entrar</a>
+                        <a href=".index.php?page=login" id="entrar" class="btn-login">Entrar</a>
                         <button class="btn btn-register">Cadastrar</button>
  
                         <button class="btn mic-btn">

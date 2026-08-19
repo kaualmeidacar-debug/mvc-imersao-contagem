@@ -18,36 +18,36 @@ function validarFormulario() {
   $("#formEvento").validate({
     // Regras de validação
     rules: {
-      // titulo: {
-      //   required: true,
-      //   minlength: 3,
-      // },
-      // categoria: {
-      //   required: true,
-      // },
-      // descricao: {
-      //   required: true,
-      //   minlength: 3,
-      // },
-      // imagem: {
-      //   required: true,
-      // },
-      // data: {
-      //   required: true,
-      // },
-      // horario: {
-      //   required: true,
-      // },
-      // local: {
-      //   required: true,
-      //   minlength: 3,
-      // },
-      // telefone: {
-      //   required: true,
-      // },
-      // email: {
-      //   required: true,
-      // },
+      titulo: {
+        required: true,
+        minlength: 3,
+      },
+      categoria: {
+        required: true,
+      },
+      descricao: {
+        required: true,
+        minlength: 3,
+      },
+      data: {
+        required: true,
+      },
+      horario: {
+        required: true,
+      },
+      local: {
+        required: true,
+        minlength: 3,
+      },
+      endereco: {
+        required: true,
+      },
+      telefone: {
+        required: true,
+      },
+      email: {
+        required: true,
+      },
     },
 
     // Mensagens em português
@@ -61,9 +61,6 @@ function validarFormulario() {
       descricao: {
         required: "Campo invalido.",
       },
-      imagem: {
-        required: "Campo invalido.",
-      },
       data: {
         required: "Campo invalido.",
       },
@@ -71,6 +68,9 @@ function validarFormulario() {
         required: "Campo invalido.",
       },
       local: {
+        required: "Campo invalido.",
+      },
+      endereco: {
         required: "Campo invalido.",
       },
       telefone: {

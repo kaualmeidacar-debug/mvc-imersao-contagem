@@ -8,8 +8,7 @@ $paginasValidas = [
     "cdstEventos" => __DIR__ . "/views/cdstEventos.php",
     "login" => __DIR__ . "/views/login.php",
     "inicio" => __DIR__ . "/views/inicio.php",
-    // "clientes" => __DIR__ . "/views/cliente.php",
-    // "funcionarios" => __DIR__ . "/views/funcionario.php",
+  
 ];
 
 // Capturar a página informada na url 

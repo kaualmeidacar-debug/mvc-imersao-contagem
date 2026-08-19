@@ -28,7 +28,7 @@
         </button>
 
         <div class="text-white">
-            <button id="btnMenu" class="btn text-white"><a href="./inicio.php" class="btn text-white">
+            <button id="btnMenu" class="btn text-white"><a href="index.php?page=inicio" class="btn text-white">
                     <i class="bi bi-house fs-4"></i>
                 </a>
             </button>
