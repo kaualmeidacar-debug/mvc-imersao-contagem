@@ -52,19 +52,17 @@ body {
 }
 
 .content {
-    margin-left: 250px;
-    transition: 0.3s;
+    min-height: 100vh;
 }
 
-.content.expandido {
-    margin-left: 0;
-}
+
 
 main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    min-height: calc(100vh - 70px);
 }
 
 /* ========================================
@@ -84,6 +82,9 @@ main {
     border: 1px solid rgba(43, 0, 80, 0.3);
     border-radius: 15px;
     padding: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .btn-purple {

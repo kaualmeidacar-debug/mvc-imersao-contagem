@@ -109,10 +109,10 @@ function validarFormulario() {
       mensagem.textContent = "Enviando dados...";
 
       try {
-        const resposta = await fetch("../controllers/adminController.php", {
-          method: "POST",
-          body: dados,
-      });
+       const resposta = await fetch("../controllers/cdstEventosController.php", {
+    method: "POST",
+    body: dados,
+});
 
         // Converte a resposta JSON
         const resultado = await resposta.json();

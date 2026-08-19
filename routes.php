@@ -5,7 +5,7 @@
 //definir páginas válidas no projeto
 $paginasValidas = [
     "landing" => __DIR__ . "/views/landing.php",
-    "admin" => __DIR__ . "/views/admin.php",
+    "cdstEventos" => __DIR__ . "/views/cdstEventos.php",
     "login" => __DIR__ . "/views/login.php",
     "inicio" => __DIR__ . "/views/inicio.php",
     // "clientes" => __DIR__ . "/views/cliente.php",
